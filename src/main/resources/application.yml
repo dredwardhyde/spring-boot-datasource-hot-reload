@@ -5,7 +5,7 @@ datasource:
     folder: ${folder_to_monitor}
   main:
     class: org.postgresql.Driver
-    url: jdbc:postgresql://${postgres_host}:${postgres_port}/${postgres_db}
+    url: jdbc:postgresql://${postgres_host}:${postgres_port}/${postgres_db}?ssl=true&sslfactory=org.postgresql.ssl.NonValidatingFactory&sslcert=${postgres_cert}&sslkey=${postgres_key}
     user: ${postgres_user}
     password: ${postgres_password}
     min-pool-size: ${postgres_min_pool_size}
@@ -15,7 +15,7 @@ datasource:
     preferred-test-query: ${postgres_preferred_test_query}
   standin:
     class: org.postgresql.Driver
-    url: jdbc:postgresql://${postgres_host}:${postgres_port}/${postgres_db}
+    url: jdbc:postgresql://${postgres_host}:${postgres_port}/${postgres_db}?ssl=true&sslfactory=org.postgresql.ssl.NonValidatingFactory&sslcert=${postgres_cert}&sslkey=${postgres_key}
     user: ${postgres_user}
     password: ${postgres_password}
     min-pool-size: ${postgres_min_pool_size}

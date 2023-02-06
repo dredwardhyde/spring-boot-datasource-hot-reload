@@ -1,1 +1,1 @@
-# spring-boot-datasource-reload
+# Spring Boot Datasource Hot Reload (PostgreSQL with TLS 1.3)

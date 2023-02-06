@@ -28,3 +28,6 @@ GRANT ALL ON SCHEMA test TO test;
 8. Change contents of [folder_to_monitor](https://github.com/dredwardhyde/spring-boot-datasource-hot-reload/tree/main/folder_to_monitor) directory (create file or something)
 
 9. Watch datasource reloading
+
+10. Check if user is connected using TLS
+<img src="https://raw.githubusercontent.com/dredwardhyde/spring-boot-datasource-hot-reload/main/readme/terminal_tls_users.png" width="500"/>  

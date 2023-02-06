@@ -1,0 +1,39 @@
+server:
+  port: ${postgres_server_port}
+datasource:
+  secret:
+    folder: ${folder_to_monitor}
+  main:
+    class: org.postgresql.Driver
+    url: jdbc:postgresql://${postgres_host}:${postgres_port}/${postgres_db}
+    user: ${postgres_user}
+    password: ${postgres_password}
+    min-pool-size: ${postgres_min_pool_size}
+    max-pool-size: ${postgres_max_pool_size}
+    max-idle-time: ${postgres_max_idle_time}
+    idle-connection-test-period: ${postgres_idle_connection_test_period}
+    preferred-test-query: ${postgres_preferred_test_query}
+  standin:
+    class: org.postgresql.Driver
+    url: jdbc:postgresql://${postgres_host}:${postgres_port}/${postgres_db}
+    user: ${postgres_user}
+    password: ${postgres_password}
+    min-pool-size: ${postgres_min_pool_size}
+    max-pool-size: ${postgres_max_pool_size}
+    max-idle-time: ${postgres_max_idle_time}
+    idle-connection-test-period: ${postgres_idle_connection_test_period}
+    preferred-test-query: ${postgres_preferred_test_query}
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  server:
+    port: 8081
+    ssl:
+      enabled: false
+  endpoint:
+    health:
+      enabled: true
+      probes:
+        enabled: true

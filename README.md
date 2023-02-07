@@ -17,7 +17,7 @@
   ssl_passphrase_command = 'echo "q1w2e3r4"'
   ```
 
-<img src="https://raw.githubusercontent.com/dredwardhyde/spring-boot-datasource-hot-reload/main/readme/postgresql_conf_settings.png" width="700"/>  
+<img src="https://raw.githubusercontent.com/dredwardhyde/spring-boot-datasource-hot-reload/main/readme/postgresql_conf_settings.png" width="500"/>  
 
 **4. Restart server**  
 
@@ -44,4 +44,4 @@ GRANT ALL ON SCHEMA test TO test;
            JOIN pg_stat_activity
                 ON pg_stat_ssl.pid = pg_stat_activity.pid;
   ```
-<img src="https://raw.githubusercontent.com/dredwardhyde/spring-boot-datasource-hot-reload/main/readme/terminal_tls_users.png" width="500"/>  
+<img src="https://raw.githubusercontent.com/dredwardhyde/spring-boot-datasource-hot-reload/main/readme/terminal_tls_users.png" width="700"/>  
